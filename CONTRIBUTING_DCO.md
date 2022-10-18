@@ -19,7 +19,7 @@ We welcome many different types of contributions and not all of them need a Pull
 * Other related activities
 
 ## Getting started
-TODO
+
 
 
 ## Contribution Flow
@@ -47,7 +47,6 @@ Before submitting your pull request, we advise you to use the following:
 
 For specifics on what to include in your report, please follow the guidelines in the issue and pull request templates when available.
 
-TODO
 
 
 ## Ask for Help
@@ -61,5 +60,4 @@ The best way to reach us with a question when contributing is to ask on:
 
 ## Additional Resources
 
-TODO
 
