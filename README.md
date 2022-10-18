@@ -70,7 +70,7 @@ as an open-source patch. For more detailed information, refer to [CONTRIBUTING.m
 
 
 ## License
-API Data Collector Copyright 2021 VMware, Inc.
+API Data Collector Copyright 2022 VMware, Inc.
 
 The BSD-2 license (the "License") set forth below applies to all parts of the Attack Surface Framework project. You may not use this file except in compliance with the License.
 
