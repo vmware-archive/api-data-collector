@@ -1,4 +1,9 @@
-# Ignore everything in this directory
-*
+# Ignore everything in these directories or files
+extension/node_modules
+extension/build
+node_modules
+static/*
+.vscode
+
 # Except this file
 !.gitignore
