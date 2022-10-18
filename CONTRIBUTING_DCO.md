@@ -1,6 +1,6 @@
 # Contributing to api-data-collector
 
-API Data Collector team welcome contributions from the community and first want to thank you for taking the time to contribute!
+API Data Collector (ADC) team welcome contributions from the community and first want to thank you for taking the time to contribute!
 
 Please familiarize yourself with the [Code of Conduct](https://github.com/vmware/.github/blob/main/CODE_OF_CONDUCT.md) before contributing.
 
@@ -19,21 +19,29 @@ We welcome many different types of contributions and not all of them need a Pull
 * Other related activities
 
 ## Getting started
-
+Because ADC is a Chrome DevTools extension, you need to know how to use or test it:
+- Chrome DevTools: go to chrome://extensions/, then choose either Upload unpacked or Update for local testing this ADC extension
+- Open Chrome DevTools, then find and click on the ADC tab to use it
 
 
 ## Contribution Flow
 
 This is a rough outline of what a contributor's workflow looks like:
 
-* Make a fork of the repository within your GitHub account
-* Create a topic branch in your fork from where you want to base your work
-* Make commits of logical units
-* Make sure your commit messages are with the proper format, quality and descriptiveness (see below)
-* Push your changes to the topic branch in your fork
-* Create a pull request containing that commit
+Create a topic branch in your fork from where you want to base your work
+Make commits of logical units
+Make sure your commit messages are with the proper format, quality and descriptiveness (see below)
+Push your changes to the topic branch in your fork
+Create a pull request containing that commit
 
 We follow the GitHub workflow and you can find more details on the [GitHub flow documentation](https://docs.github.com/en/get-started/quickstart/github-flow).
+
+Example:
+git remote add upstream https://github.com/vmware-labs/api-data-collector.git
+git checkout -b my-new-feature main
+git commit -a
+git push origin my-new-feature
+
 
 ### Pull Request Checklist
 
