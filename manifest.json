@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_icon": {
+         "38": "img/trace.png"
+      },
+      "default_title": "API Data Captor for Mock Servers"
+   },
+   "description": "",
+   "icons": {
+      "128": "img/trace.png"
+   },
+   "manifest_version": 3,
+   "name": "API Data Captor for Mock Servers",
+   "offline_enabled": true,
+   "permissions": [ "tabs","storage","webRequest", "declarativeNetRequest"],
+   "devtools_page" : "devtools.html",
+   "host_permissions": [ "http://*/", "https://*/", "\u003Call_urls>" ],
+   "content_scripts": [
+      {
+        "js": ["content_script.js"],
+        "matches": ["https://*/*"],
+        "all_frames": true
+      }
+    ],
+   "web_accessible_resources": [{"resources": ["inject.js","devtools.js"],"matches":["https://*/*"]},{
+      "resources": ["ajax-hook.js"],"matches":["https://*/*"]
+   }],
+   "version": "1.0"
+}

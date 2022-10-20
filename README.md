@@ -1,92 +1,50 @@
-# mock-server-generator
+# API Data Captor for Mock Servers
 
-This is a chrome extension to capture the network traffic and generate a mock server.
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.eng.vmware.com/cpsbu/cloud-path/mock-server-generator.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.eng.vmware.com/cpsbu/cloud-path/mock-server-generator/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
+API Data Captor for Mock Servers is a Chrome DevTools Extension powered by React and Ant Design that can capture HTTP Requests and save/edit its Response Payloads in JSON for updating local mock server database. It also can allow users to record the selected Requests/Responses details and save them as JSON or ZIP files. According to different input "project" and "session" field, the JSON object will be stored locally and can be retrieved. Also, it will generate custom routes.json file automatically.
 ## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+
+API Data Captor uses npm to manage and install packages. It is strongly recommended to install Node.js >16 and npm.
+
+1. Clone the repo in your local system
+```
+git clone git@gitlab.eng.vmware.com:cpsbu/cloud-path/mock-server-generator.git
+```
+
+2. Enter the /extension folder in the repo, install the dependencies and build the application
+```
+npm install
+ 
+npm run move
+```
+
+3. Open Chrome with the extensions management address chrome://extensions
+
+4. Click the "Load Unpacked" button and selected the Repo folder
 
 ## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- Project/Session management: You can select/input the "Project" and "Session" field to save/load your JSON file according to the selected two fields locally.
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+- Start/Stop recording: You can click on the "Capture" switch to enable/disable the recording functionalities.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- Max Record Limitation: You can click on the "Record Limit" switch to enable/disable the max number limitation for the records. The default value is 50. You can input and select the number you want in the selector near the switch.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+- Clear: You can click the "Clear" button to clear all the captured information data in the current session.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- Setting: You can select the request type you want to capture.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+- Save/Load locally: When you entered the "Project" and "Session" fields, you can click "Save To Local" or "Load From Local" button to store and retrieve the data stored in JSON object.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- Download: You can choose to download the captured data in JSON or ZIP format by clicking "Download JSON" or "Download ZIP" button. Also, you can download the selected data by clicking the "Download selected".
+
+- Data Selection, Searching and Filtering: The captured data will be listed in the table below. You can click the "Response" button to preview the response payload. You can search the data according to the keywords in URL and select the data you want.
+
+- Automated capture process for CPN mock server: As for OAuth Apps, the "oath-apps", "max-oath-apps" and "roles" fields are be automatically captured.
+
+- Regular Expression for routes: Users can edit the regex lists by opening the regex modal. Specifically, each visited URL will be splitted by "/" and if one part matches regex list, it will be replaced by the corresponding identifier.
+
+- Automated capture process for CPN mock server: As for OAuth Apps, the "oath-apps", "max-oath-apps" and "roles" fields are be automatically captured.
+
+- Response editing: You can edit the response by clicking the response editing icon in the response preview page.
 
 ## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+- BSD-2

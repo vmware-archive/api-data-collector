@@ -1,0 +1,5 @@
+extension/node_modules
+extension/build
+node_modules
+static/*
+.vscode

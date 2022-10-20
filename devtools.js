@@ -1,0 +1,1 @@
+chrome.devtools.panels.create("API Data Captor", null, "./extension/build/index.html");
