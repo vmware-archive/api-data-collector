@@ -3,14 +3,14 @@
       "default_icon": {
          "38": "img/trace.png"
       },
-      "default_title": "API Data Captor for Mock Servers"
+      "default_title": "API Data Collector"
    },
    "description": "",
    "icons": {
       "128": "img/trace.png"
    },
    "manifest_version": 3,
-   "name": "API Data Captor for Mock Servers",
+   "name": "API Data Collector",
    "offline_enabled": true,
    "permissions": [ "tabs","storage","webRequest", "declarativeNetRequest"],
    "devtools_page" : "devtools.html",

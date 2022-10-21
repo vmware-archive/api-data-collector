@@ -519,7 +519,7 @@ function App() {
         onBack={() => null}
         backIcon=<CloudSyncOutlined />
         className="site-page-header"
-        title="API Data Captor for Mock Servers"
+        title="API Data Collector"
         extra={[
           <Tooltip title={"Manage Projects/Scenarios"}>
             <Button

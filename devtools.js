@@ -1,1 +1,1 @@
-chrome.devtools.panels.create("API Data Captor", null, "./extension/build/index.html");
+chrome.devtools.panels.create("API Data Collector", null, "./extension/build/index.html");

@@ -1,7 +1,7 @@
 # api-data-collector
 
 ## Overview
-API Data Collector is a Chrome DevTools Extension, which captures HTTP Requests and Responses, especially API response data. It provides:
+API Data Collector (ADC) is a Chrome DevTools Extension, which captures HTTP Requests and Responses, especially API response data. It provides:
 * Capturing HTTP requests and responses, especially API response data, and saving or downloading it in JSON or ZIP formats for updating local Mock Server database
 * Saving and then editing API response payloads for local testing and troubleshooting production issues.
 * Storing and retrieving different user sessions for local development and debugging.
