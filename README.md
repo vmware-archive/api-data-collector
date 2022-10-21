@@ -16,17 +16,21 @@ API Data Collector uses npm to manage and install packages. It is strongly recom
 
 ### Installation, Build & Run
 1. Clone the repo in your local system
-2. Enter the /extension folder in the repo, install the dependencies and build the application
+2. Install ajax.hook and file-saver at root level
+```
+npm install
+```
+3. Enter the /extension folder in the repo, install the dependencies and build the application
 ```
 npm install
 npm run move
 ```
-3. Open Chrome with the extensions management address chrome://extensions
-4. Click the "Load Unpacked" button and selected the Repo folder
+4. Open Chrome with the extensions management address chrome://extensions
+5. Click the "Load Unpacked" button and selected the Repo folder
 
 ## Documentation
 Usage Guide and functionalities
-* To use the extensions you need to open the Chrome DevTools first. Then, Select the "MSDG" panel. Keep the DevTools opened when using this tool.
+* To use the extensions you need to open the Chrome DevTools first. Then, Select the "ADC" panel. Keep the DevTools opened when using this tool.
 
 * Project/Session management: You can select/input the "Project" and "Session" field to save/load your JSON file according to the selected two fields locally.
 
